@@ -1,7 +1,5 @@
 # Andriod_Note_App
 
-# Notes Android App
-
 ## Overview
 
 This is a simple Notes Android app built using Java and Firebase. The app allows users to sign in using Google, view, add, edit, and delete notes. It uses fragments to navigate between different screens within a single activity.
