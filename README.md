@@ -31,17 +31,17 @@ This is a simple Notes Android app built using Java and Firebase. The app allows
 - **Description**: The main entry point of the app. Manages navigation between different fragments based on user login status.
 - **Key Methods**:
   - **`onCreate()`**: Initializes the activity and loads the appropriate fragment based on login status.
-  - **`navigateToLoginFragment()`**: Replaces the current fragment with `LoginFragment`.
-  - **`navigateToNotesFragment()`**: Replaces the current fragment with `NotesFragment`.
+  - **`navigateToLoginFragment()`**: Replaces the current fragment with `login_fragment`.
+  - **`navigateToNotesFragment()`**: Replaces the current fragment with `notes_fragment`.
   - **`navigateToAddEditNoteFragment()`**: Replaces the current fragment with `AddEditNoteFragment` for adding or editing a note.
 
-### 2. `LoginFragment.java`
+### 2. `login_fragment.java`
 - **Description**: Handles user login via Google Sign-In.
 - **Key Components**:
   - **Google Sign-In Button**: Allows users to sign in with their Google account.
   - **`onActivityResult()`**: Handles the result of the Google Sign-In intent and manages login success or failure.
 
-### 3. `NotesFragment.java`
+### 3. `notes_fragment.java`
 - **Description**: Displays a list of notes for the logged-in user.
 - **Key Components**:
   - **RecyclerView**: Shows the list of notes.
@@ -53,14 +53,8 @@ This is a simple Notes Android app built using Java and Firebase. The app allows
   - **Input fields**: For note title and content.
   - **Save button**: To save the note (add or update).
 
-### 5. `Note.java`
+### 5. `note.java`
 - **Description**: A model class representing a note with properties like title and content.
 
 ### 6. Firebase Integration
 - **`google-services.json`**: Configuration file for Firebase, enabling Firebase services like authentication and database access. Place this file in the `app` directory.
-
-## Setup and Installation
-
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/yourusername/notes_app.git
