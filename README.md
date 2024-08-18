@@ -1,64 +1,66 @@
 # Andriod_Note_App
 
-Overview
-This Notes Android app, developed using Java and Firebase, is designed to provide users with a seamless experience for managing their notes. It allows users to sign in via Google, and perform CRUD (Create, Read, Update, Delete) operations on their notes. The app utilizes fragments to handle different screens within a single activity.
+# Notes Android App
 
-Features
-Google Sign-In:
+## Overview
 
-Users can authenticate using their Google accounts. This feature is implemented using Firebase Authentication to ensure a secure sign-in process.
-View Notes:
+This is a simple Notes Android app built using Java and Firebase. The app allows users to sign in using Google, view, add, edit, and delete notes. It uses fragments to navigate between different screens within a single activity.
 
-After signing in, users are presented with a list of their notes. This view uses a RecyclerView to display notes in a scrollable list format.
-Add Notes:
+## Features
 
-Users can add new notes through a dedicated interface. This feature is accessible via a FloatingActionButton that leads to a form where users can input note details.
-Edit Notes:
+- **Google Sign-In**: Allows users to sign in using their Google account.
+- **View Notes**: Displays a list of notes for the signed-in user.
+- **Add Notes**: Allows users to add new notes.
+- **Edit Notes**: Allows users to update existing notes.
+- **Delete Notes**: Allows users to remove notes.
 
-Existing notes can be updated. Users can access this feature by selecting a note from the list, which opens an edit form pre-filled with the note's current content.
-Delete Notes:
+## Screenshots
 
-Users have the option to remove notes from the list, providing a way to manage and organize their notes effectively.
-Screenshots
-Login Screen:
+- **Login Screen**:
+  ![Login Screen](path/to/login_screen_screenshot.png)
 
-Shows the Google Sign-In button for user authentication.
-Notes List:
+- **Notes List**:
+  ![Notes List](path/to/notes_list_screenshot.png)
 
-Displays a list of notes in a RecyclerView, showing each note’s title and content.
-Add/Edit Note:
+- **Add/Edit Note**:
+  ![Add/Edit Note](path/to/add_edit_note_screenshot.png)
 
-Provides input fields for entering or updating a note's title and content, along with a save button to submit changes.
-Project Structure
-MainActivity.java
+## Project Structure
 
-Description: Serves as the central entry point of the app, handling fragment transitions based on user authentication status.
-Key Methods:
-onCreate(): Initializes the activity and checks whether the user is logged in to load the appropriate fragment.
-navigateToLoginFragment(): Switches to the LoginFragment if the user is not authenticated.
-navigateToNotesFragment(): Switches to the NotesFragment to display the list of notes.
-navigateToAddEditNoteFragment(): Opens the AddEditNoteFragment for adding or editing notes.
-LoginFragment.java
+### 1. `MainActivity.java`
+- **Description**: The main entry point of the app. Manages navigation between different fragments based on user login status.
+- **Key Methods**:
+  - **`onCreate()`**: Initializes the activity and loads the appropriate fragment based on login status.
+  - **`navigateToLoginFragment()`**: Replaces the current fragment with `LoginFragment`.
+  - **`navigateToNotesFragment()`**: Replaces the current fragment with `NotesFragment`.
+  - **`navigateToAddEditNoteFragment()`**: Replaces the current fragment with `AddEditNoteFragment` for adding or editing a note.
 
-Description: Manages user login using Google Sign-In.
-Key Components:
-Google Sign-In Button: Facilitates Google account authentication.
-onActivityResult(): Processes the result of the Google Sign-In attempt to handle success or failure.
-NotesFragment.java
+### 2. `LoginFragment.java`
+- **Description**: Handles user login via Google Sign-In.
+- **Key Components**:
+  - **Google Sign-In Button**: Allows users to sign in with their Google account.
+  - **`onActivityResult()`**: Handles the result of the Google Sign-In intent and manages login success or failure.
 
-Description: Displays the list of notes for the signed-in user.
-Key Components:
-RecyclerView: Lists all notes using a scrollable format.
-FloatingActionButton: Opens the AddEditNoteFragment for creating a new note.
-AddEditNoteFragment.java
+### 3. `NotesFragment.java`
+- **Description**: Displays a list of notes for the logged-in user.
+- **Key Components**:
+  - **RecyclerView**: Shows the list of notes.
+  - **FloatingActionButton**: Opens the `AddEditNoteFragment` to add a new note.
 
-Description: Provides a user interface for adding or modifying notes.
-Key Components:
-Input Fields: For entering the note's title and content.
-Save Button: Saves the new or updated note.
-Note.java
+### 4. `AddEditNoteFragment.java`
+- **Description**: Provides a form for adding or editing notes.
+- **Key Components**:
+  - **Input fields**: For note title and content.
+  - **Save button**: To save the note (add or update).
 
-Description: A data model representing a note with attributes such as title and content.
-Firebase Integration
+### 5. `Note.java`
+- **Description**: A model class representing a note with properties like title and content.
 
-google-services.json: A configuration file that enables Firebase services for authentication and other backend functionalities. This file must be placed in the app directory to integrate Firebase with the app.
+### 6. Firebase Integration
+- **`google-services.json`**: Configuration file for Firebase, enabling Firebase services like authentication and database access. Place this file in the `app` directory.
+
+## Setup and Installation
+
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/yourusername/notes_app.git
