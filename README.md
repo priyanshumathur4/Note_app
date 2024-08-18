@@ -12,17 +12,6 @@ This is a simple Notes Android app built using Java and Firebase. The app allows
 - **Edit Notes**: Allows users to update existing notes.
 - **Delete Notes**: Allows users to remove notes.
 
-## Screenshots
-
-- **Login Screen**:
-  ![Login Screen](path/to/login_screen_screenshot.png)
-
-- **Notes List**:
-  ![Notes List](path/to/notes_list_screenshot.png)
-
-- **Add/Edit Note**:
-  ![Add/Edit Note](path/to/add_edit_note_screenshot.png)
-
 ## Project Structure
 
 ### 1. `MainActivity.java`
